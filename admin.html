@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - eVote</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>eVote Admin</h2>
+    <ul>
+        <li onclick="showSection('dashboard')">Dashboard</li>
+        <li onclick="showSection('voters')">Manage Voters</li>
+        <li onclick="showSection('candidates')">Manage Candidates</li>
+        <li onclick="showSection('results')">Live Results</li>
+        <li onclick="showSection('election')">Election Control</li>
+        <li onclick="showSection('reports')">Reports</li>
+        <li onclick="logout()">Logout</li>
+    </ul>
+</div>
+
+<div class="main">
+    <div id="dashboard" class="section active"></div>
+    <div id="voters" class="section"></div>
+    <div id="candidates" class="section"></div>
+    <div id="results" class="section"></div>
+    <div id="election" class="section"></div>
+    <div id="reports" class="section"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Voting Panel</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+<h2>Voting Panel</h2>
+
+<form id="voteForm">
+<div id="candidateOptions"></div>
+<button type="submit">Submit Vote</button>
+</form>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+<script type="module">
+import { renderCandidates, submitVote } from "./js/voting.js";
+
+renderCandidates();
+
+document.getElementById("voteForm").addEventListener("submit",function(e){
+e.preventDefault();
+submitVote();
+});
+
+window.logout = ()=> location.href="index.html";
+</script>
+
+</body>
+</html>
